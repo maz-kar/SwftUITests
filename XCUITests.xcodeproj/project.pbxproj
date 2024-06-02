@@ -15,6 +15,7 @@
 		6B6872802C0CDFBA003F096F /* XCUITestsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B68727F2C0CDFBA003F096F /* XCUITestsUITests.swift */; };
 		6B6872822C0CDFBA003F096F /* XCUITestsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6872812C0CDFBA003F096F /* XCUITestsUITestsLaunchTests.swift */; };
 		6B68728F2C0CE091003F096F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6B68728E2C0CE091003F096F /* README.md */; };
+		6B6872912C0CE0F5003F096F /* XCUITestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6872902C0CE0F5003F096F /* XCUITestsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		6B68727F2C0CDFBA003F096F /* XCUITestsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUITestsUITests.swift; sourceTree = "<group>"; };
 		6B6872812C0CDFBA003F096F /* XCUITestsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUITestsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6B68728E2C0CE091003F096F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6B6872902C0CE0F5003F096F /* XCUITestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUITestsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				6B6872642C0CDFB9003F096F /* XCUITestsApp.swift */,
 				6B6872662C0CDFB9003F096F /* ContentView.swift */,
+				6B6872902C0CE0F5003F096F /* XCUITestsView.swift */,
 				6B6872682C0CDFBA003F096F /* Assets.xcassets */,
 				6B68726A2C0CDFBA003F096F /* Preview Content */,
 			);
@@ -263,6 +266,7 @@
 			files = (
 				6B6872672C0CDFB9003F096F /* ContentView.swift in Sources */,
 				6B6872652C0CDFB9003F096F /* XCUITestsApp.swift in Sources */,
+				6B6872912C0CE0F5003F096F /* XCUITestsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
