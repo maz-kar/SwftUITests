@@ -14,6 +14,7 @@
 		6B6872762C0CDFBA003F096F /* XCUITestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6872752C0CDFBA003F096F /* XCUITestsTests.swift */; };
 		6B6872802C0CDFBA003F096F /* XCUITestsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B68727F2C0CDFBA003F096F /* XCUITestsUITests.swift */; };
 		6B6872822C0CDFBA003F096F /* XCUITestsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6872812C0CDFBA003F096F /* XCUITestsUITestsLaunchTests.swift */; };
+		6B68728F2C0CE091003F096F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6B68728E2C0CE091003F096F /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		6B68727B2C0CDFBA003F096F /* XCUITestsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCUITestsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B68727F2C0CDFBA003F096F /* XCUITestsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUITestsUITests.swift; sourceTree = "<group>"; };
 		6B6872812C0CDFBA003F096F /* XCUITestsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUITestsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6B68728E2C0CE091003F096F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		6B6872582C0CDFB9003F096F = {
 			isa = PBXGroup;
 			children = (
+				6B68728E2C0CE091003F096F /* README.md */,
 				6B6872632C0CDFB9003F096F /* XCUITests */,
 				6B6872742C0CDFBA003F096F /* XCUITestsTests */,
 				6B68727E2C0CDFBA003F096F /* XCUITestsUITests */,
@@ -231,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B68728F2C0CE091003F096F /* README.md in Resources */,
 				6B68726C2C0CDFBA003F096F /* Preview Assets.xcassets in Resources */,
 				6B6872692C0CDFBA003F096F /* Assets.xcassets in Resources */,
 			);
