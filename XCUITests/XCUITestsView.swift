@@ -25,32 +25,39 @@ struct XCUITestsView: View {
                 endPoint: .bottomTrailing)
             .ignoresSafeArea()
             
-            VStack {
-                TextField(vm.placeholderText, text: $vm.textFieldText)
-                    .font(.headline)
-                    .padding()
-                    .background(Color.white)
-                    .cornerRadius(10)
-                
-                Button(action: {
-                    
-                }, label: {
-                    Text("Sign up")
-                        .foregroundStyle(Color.white)
-                        .font(.headline)
-                        .frame(maxWidth: .infinity)
-                        .padding()
-                        .background(Color.blue)
-                        .cornerRadius(10)
-                    
-                        
-                })
-            }
-            .padding()
+            SignUpLayer
         }
     }
 }
 
-#Preview {
-    XCUITestsView()
+struct XCUITestsView_Previews: PreviewProvider {
+    static var previews: some View {
+        XCUITestsView()
+    }
+}
+
+extension XCUITestsView {
+    
+    private var SignUpLayer: some View {
+        VStack {
+            TextField(vm.placeholderText, text: $vm.textFieldText)
+                .font(.headline)
+                .padding()
+                .background(Color.white)
+                .cornerRadius(10)
+            
+            Button(action: {
+                
+            }, label: {
+                Text("Sign up")
+                    .foregroundStyle(Color.white)
+                    .font(.headline)
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(Color.blue)
+                    .cornerRadius(10)
+            })
+        }
+        .padding()
+    }
 }
