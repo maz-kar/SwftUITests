@@ -31,12 +31,19 @@ struct XCUITestsView: View {
                 endPoint: .bottomTrailing)
             .ignoresSafeArea()
             
-            if !vm.currentUserIsSignedIn {
-                SignUpLayer
-            } else {
-                Text("Hello world!")
-                    .font(.headline)
-                    .foregroundStyle(Color.white)
+            ZStack {
+                if vm.currentUserIsSignedIn {
+                    Text("Hello world!")
+                        .font(.headline)
+                        .foregroundStyle(Color.white)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .transition(.move(edge: .trailing))
+                }
+                if !vm.currentUserIsSignedIn {
+                    SignUpLayer
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .transition(.move(edge: .leading))
+                }
             }
         }
     }
@@ -59,7 +66,9 @@ extension XCUITestsView {
                 .cornerRadius(10)
             
             Button(action: {
-                vm.signUpButtonPressed()
+                withAnimation(.spring()) {
+                    vm.signUpButtonPressed()
+                }
             }, label: {
                 Text("Sign up")
                     .foregroundStyle(Color.white)
