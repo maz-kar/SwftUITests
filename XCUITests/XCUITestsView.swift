@@ -33,11 +33,7 @@ struct XCUITestsView: View {
             
             ZStack {
                 if vm.currentUserIsSignedIn {
-                    Text("Hello world!")
-                        .font(.headline)
-                        .foregroundStyle(Color.white)
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .transition(.move(edge: .trailing))
+                    SignedInHomeView()
                 }
                 if !vm.currentUserIsSignedIn {
                     SignUpLayer
@@ -80,5 +76,46 @@ extension XCUITestsView {
             })
         }
         .padding()
+    }
+}
+
+struct SignedInHomeView: View {
+    
+    @State var showAlert: Bool = false
+    
+    var body: some View {
+        NavigationView {
+            VStack(spacing: 20) {
+                Button(action: {
+                    showAlert.toggle()
+                }, label: {
+                    Text("Show welcome alert!")
+                        .foregroundStyle(Color.white)
+                        .font(.headline)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color.red)
+                        .cornerRadius(10)
+                })
+                .alert(isPresented: $showAlert, content: {
+                    return Alert(title: Text("Welcome to the app!"))
+                })
+                NavigationLink {
+                    Text("Destination")
+                } label: {
+                    Text("Navigate")
+                        .foregroundStyle(Color.white)
+                        .font(.headline)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                }
+
+            }
+            .padding()
+            .navigationTitle("Welcome")
+        }
+        
     }
 }
