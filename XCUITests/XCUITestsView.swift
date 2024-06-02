@@ -11,6 +11,12 @@ class XCUITestsViewModel: ObservableObject {
     
     let placeholderText: String = "Add your name..."
     @Published var textFieldText: String = ""
+    @Published var currentUserIsSignedIn: Bool = false
+    
+    func signUpButtonPressed() {
+        guard !textFieldText.isEmpty else { return }
+        currentUserIsSignedIn = true
+    }
 }
 
 struct XCUITestsView: View {
@@ -25,7 +31,13 @@ struct XCUITestsView: View {
                 endPoint: .bottomTrailing)
             .ignoresSafeArea()
             
-            SignUpLayer
+            if !vm.currentUserIsSignedIn {
+                SignUpLayer
+            } else {
+                Text("Hello world!")
+                    .font(.headline)
+                    .foregroundStyle(Color.white)
+            }
         }
     }
 }
@@ -47,7 +59,7 @@ extension XCUITestsView {
                 .cornerRadius(10)
             
             Button(action: {
-                
+                vm.signUpButtonPressed()
             }, label: {
                 Text("Sign up")
                     .foregroundStyle(Color.white)

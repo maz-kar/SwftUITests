@@ -11,7 +11,7 @@ import SwiftUI
 struct XCUITestsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            XCUITestsView()
         }
     }
 }
