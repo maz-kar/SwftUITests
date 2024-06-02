@@ -31,6 +31,20 @@ struct XCUITestsView: View {
                     .padding()
                     .background(Color.white)
                     .cornerRadius(10)
+                
+                Button(action: {
+                    
+                }, label: {
+                    Text("Sign up")
+                        .foregroundStyle(Color.white)
+                        .font(.headline)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                    
+                        
+                })
             }
             .padding()
         }
