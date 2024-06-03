@@ -6,6 +6,10 @@ An iOS experiment with UITests.
 ## Frameworks
 Swift - XCTest - SwiftUI
 
-## Instructions
+### Naming Convention:
+test_UnitOfWork_StateUnderTest_ExpectedBehavior
+
+### Testing Convention:
+Given, When, Then
 
  
