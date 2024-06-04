@@ -11,5 +11,3 @@ test_UnitOfWork_StateUnderTest_ExpectedBehavior
 
 ### Testing Convention:
 Given, When, Then
-
- 
