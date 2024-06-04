@@ -20,26 +20,42 @@ final class XCUITestsViewUITests: XCTestCase {
     }
     
     func test_signUpButton_shouldNotSignIn() {
+        let textField = app.textFields["Add your name..."]
+        textField.tap()
         
+        let signUpButton = app.buttons["Sign up"]
+        signUpButton.tap()
         
+        let navBar = app.navigationBars["Welcome"]
+        
+        XCTAssertFalse(navBar.exists)
         
     }
     
     func test_signUpButton_shouldSignIn() {
+        //Given
+        let textField = app.textFields["Add your name..."]
         
-        app.textFields["Add your name..."].tap()
+        //When
+        textField.tap()
         
-        let aKey = app.keys["A"]
-        aKey.tap()
-        aKey.tap()
+        let keyA = app.keys["A"]
+        keyA.tap()
         
-        let aKey2 = app.keys["a"]
-        aKey2.tap()
-        aKey2.tap()
-        aKey2.tap()
-        aKey2.tap()
-        app.buttons["Return"].tap()
-        app.buttons["Sign up"].tap()
-        app.navigationBars["Welcome"].staticTexts["Welcome"].tap()
+        let keya = app.keys["a"]
+        keya.tap()
+        keya.tap()
+        
+        let returnButton = app.buttons["Return"]
+        returnButton.tap()
+        
+        let signUpButton = app.buttons["Sign up"]
+        signUpButton.tap()
+        
+        let navBar = app.navigationBars["Welcome"]
+        
+        //Then
+        XCTAssertTrue(navBar.exists)
     }
+
 }
