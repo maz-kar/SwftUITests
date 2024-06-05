@@ -60,6 +60,7 @@ extension XCUITestsView {
                 .padding()
                 .background(Color.white)
                 .cornerRadius(10)
+                .accessibility(identifier: "SignUpTextField")
             
             Button(action: {
                 withAnimation(.spring()) {
@@ -74,6 +75,7 @@ extension XCUITestsView {
                     .background(Color.blue)
                     .cornerRadius(10)
             })
+            .accessibility(identifier: "SignUpButton")
         }
         .padding()
     }

@@ -22,8 +22,9 @@ final class XCUITestsViewUITests: XCTestCase {
     func test_signUpButton_shouldNotSignIn() {
         let textField = app.textFields["Add your name..."]
         textField.tap()
+    
         
-        let signUpButton = app.buttons["Sign up"]
+        let signUpButton = app.buttons["SignUpButton"]
         signUpButton.tap()
         
         let navBar = app.navigationBars["Welcome"]
@@ -34,7 +35,7 @@ final class XCUITestsViewUITests: XCTestCase {
     
     func test_signUpButton_shouldSignIn() {
         //Given
-        let textField = app.textFields["Add your name..."]
+        let textField = app.textFields["SignUpTextField"]
         
         //When
         textField.tap()
@@ -49,7 +50,7 @@ final class XCUITestsViewUITests: XCTestCase {
         let returnButton = app.buttons["Return"]
         returnButton.tap()
         
-        let signUpButton = app.buttons["Sign up"]
+        let signUpButton = app.buttons["SignUpButton"]
         signUpButton.tap()
         
         let navBar = app.navigationBars["Welcome"]
