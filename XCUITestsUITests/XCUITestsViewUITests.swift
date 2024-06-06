@@ -20,9 +20,11 @@ final class XCUITestsViewUITests: XCTestCase {
     }
     
     func test_signUpButton_shouldNotSignIn() {
-        let textField = app.textFields["Add your name..."]
+        let textField = app.textFields["SignUpTextField"]
         textField.tap()
     
+        let returnButton = app.buttons["Return"]
+        returnButton.tap()
         
         let signUpButton = app.buttons["SignUpButton"]
         signUpButton.tap()
